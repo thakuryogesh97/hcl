@@ -4,9 +4,9 @@ provider "aws" {
 
 
 resource "aws_instance" "one" {
- count = 3
+ count = 2
   ami           = "ami-04c08fd8aa14af291"
-  instance_type = "t3.small"
+  instance_type = "t3.micro"
   tags = {
     Name = "prod-3-server-${count.index+1}"
   }
